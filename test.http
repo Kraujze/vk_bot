@@ -1,9 +1,0 @@
-POST http://unifyost.ru/vk/?dev=1
-Content-Type: application/json
-
-{ "type": "confirmation", "group_id": 195367334 }
-###
-POST http://unifyost.ru/vk/?dev=1
-Content-Type: application/json
-
-{ "type": "message_new", "object": {"message" :  {"text" :  "!123"}} }
