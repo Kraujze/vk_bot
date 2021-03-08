@@ -1,14 +1,19 @@
 <?php
 return [
     '' => [
-        'Module' => 'Default',
+        'Module' => 'DefaultModule',
         'Controller' => 'Main',
-        'Access' => 'Default'
+        'Access' => 0
     ],
     'проверка' => [
-        'Module' => 'Default',
+        'Module' => 'DefaultModule',
         'Controller' => 'Main',
-        'Access' => 'Default'
+        'Access' => 0
+    ],
+    'лёша' => [
+        'Module' => 'DefaultModule',
+        'Controller' => 'Main',
+        'Access' => 1
     ]
 ];
 ?>
