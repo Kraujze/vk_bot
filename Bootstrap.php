@@ -30,9 +30,13 @@ class Bootstrap {
                 echo $this->config->get('confirmation_token');
                 break;
             case 'message_new':
-                echo('ok');
+
+                ignore_user_abort(true);
                 $controller = new Controller($this->data,$this->config->get('token'));
                 break;
+            default:
+                ignore_user_abort(true);
+                echo('ok');
         }
     }
 }
