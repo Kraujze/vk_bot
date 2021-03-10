@@ -3,7 +3,7 @@
 if (!isset($_REQUEST)) {
     return;
 }
-
+echo('ok');
 if ($_GET["dev"] == 1) {
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
