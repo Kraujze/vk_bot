@@ -30,12 +30,9 @@ class Bootstrap {
                 echo $this->config->get('confirmation_token');
                 break;
             case 'message_new':
-                $controller = new Controller($this->data,$this->config->get('token'));
                 echo('ok');
+                $controller = new Controller($this->data,$this->config->get('token'));
                 break;
         }
-    }
-    static public function test($t) {
-        return $t;
     }
 }
