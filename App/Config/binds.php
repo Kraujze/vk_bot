@@ -10,10 +10,20 @@ return [
         'Controller' => 'Main',
         'Access' => 0
     ],
-    'лёша' => [
+    'помощь' => [
         'Module' => 'DefaultModule',
         'Controller' => 'Main',
-        'Access' => 1
+        'Access' => 0
+    ],
+    'help' => [
+        'Module' => 'DefaultModule',
+        'Controller' => 'Main',
+        'Access' => 0
+    ],
+    'тест' => [
+        'Module' => 'DefaultModule',
+        'Controller' => 'Main',
+        'Access' => 0
     ]
 ];
 ?>
