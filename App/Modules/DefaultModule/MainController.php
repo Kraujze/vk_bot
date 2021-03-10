@@ -13,21 +13,21 @@ class MainController extends Controller {
         $this->data = $data;
         $this->command = $command;
         $this->params = $params;
-        self::$commands = require(__DIR__.'Commands.php');
-        //if ($command = 'лёша') { parent::sendMessage('Лёша не лох, он красава!', $data->peer_id); } else { parent::sendMessage($command, $data->peer_id); }
-
+        self::$commands = require(__DIR__.'/'.'Commands.php');
         foreach (self::$commands as $key => $cmd) {
+            echo $key.PHP_EOL;
             if (in_array($command, $cmd['triggers'])) {
-                $execute = $cmd;
+                $execute = $key;
+                break;
             } else {
                 $execute = 'default';
             }
         }
         $this->$execute();
+        //if ($execute = 'help') {$this->help();}
     }
 
     public function help() {
-        echo 'help';
         parent::sendMessage('Хелп', $this->data->peer_id);
     }
     public function test() {
