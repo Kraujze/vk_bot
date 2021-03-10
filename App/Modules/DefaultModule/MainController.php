@@ -15,7 +15,6 @@ class MainController extends Controller {
         $this->params = $params;
         self::$commands = require(__DIR__.'/'.'Commands.php');
         foreach (self::$commands as $key => $cmd) {
-            echo $key.PHP_EOL;
             if (in_array($command, $cmd['triggers'])) {
                 $execute = $key;
                 break;
@@ -24,7 +23,6 @@ class MainController extends Controller {
             }
         }
         $this->$execute();
-        //if ($execute = 'help') {$this->help();}
     }
 
     public function help() {
