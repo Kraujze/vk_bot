@@ -49,12 +49,12 @@ class Controller {
             return;
         }
 
-        if (array_key_exists($message_text, $this->binds)) {
-            return;
-        }
-
         $arguments = explode(' ',$message_text);
         $command = substr(array_shift($arguments),1);
+
+        if (!array_key_exists($command, $this->binds)) {
+            return;
+        }
 
         if (!($this->access >= $this->binds[$command]['Access'])) {
             return;
